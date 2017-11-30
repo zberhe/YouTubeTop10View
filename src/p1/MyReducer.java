@@ -24,9 +24,7 @@ public class MyReducer extends Reducer<Text,Text,Text,IntWritable> {
  for(Text value: values){
      String data[] = value.toString().split(":");
      String videoID = data[0];
-     System.out.println(videoID);
      int videoViews = Integer.parseInt(data[1]);
-     System.out.println(videoViews);
       youTube = new YouTube(videoID.toString(),videoViews);
      videoList.add(youTube);
  }
